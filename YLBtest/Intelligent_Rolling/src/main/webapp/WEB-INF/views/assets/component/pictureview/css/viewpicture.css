@@ -1,0 +1,62 @@
+/*演示*/
+
+.artZoom {
+    padding:3px;
+    background:#FFF;
+    border:1px solid #EBEBEB;
+}
+body {
+    font-size:75%;
+    font-family:'微软雅黑';
+    padding-bottom:200px;
+}
+img {
+    border:0 none;
+}
+.picture-to-view {
+    width:700px;
+
+    background:#ffffff;
+}
+.picture-to-view p, .picture-to-view ul {
+    padding:0;
+    margin:0;
+}
+.picture-to-view ul,.picture-to-view ol,.picture-to-view li {
+    list-style:none;
+}
+#about {
+    width:550px;
+    padding-bottom:20px;
+    border-bottom:1px solid #CCC;
+    font-size:14px;
+}
+#about .planeart, #about .planeart a {
+    color:#CCC;
+}
+.footer { color:#666; width:550px; }
+.content {
+    padding:20px;
+    background:#f3f6fa;
+    border:1px solid #e3e7ed;
+    border-radius: 10px;
+}
+.help {
+    font-size:12px;
+    font-weight:normal;
+    color:#808080;
+    cursor:help;
+}
+dt {
+    font-size:18px;
+    font-weight:bold;
+}
+dd {
+    padding:20px 0;
+}
+ul.imgList {
+}
+ul.imgList li {
+    margin-top:10px;
+    list-style:none;
+}

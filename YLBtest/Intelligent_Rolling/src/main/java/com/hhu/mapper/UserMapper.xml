@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hhu.dao.UserDao">
+<!--    <select id="selectUsername" parameterType="string" resultType="com.hhu.model.User">-->
+<!--        SELECT *-->
+<!--        FROM-->
+<!--        Intelligent_Rolling.dbo.Users-->
+<!--        <where>-->
+<!--            Users.username = '${username}'-->
+<!--        </where>-->
+<!--    </select>-->
+    <select id="selectUsername" parameterType="string" resultType="com.hhu.model.User">
+        SELECT *
+        FROM
+        "USER"
+        <where>
+            username = '${username}'
+        </where>
+    </select>
+    <select id="getUserInfo" resultType="com.hhu.model.User">
+        SELECT
+        Users.realname,
+        Users.note,
+        Users.username,
+        Users.authority
+        FROM
+        Intelligent_Rolling.dbo.Users
+        <where>
+            Users.username = '${username}'
+        </where>
+    </select>
+    <update id="update_password">
+        UPDATE
+        Intelligent_Rolling.dbo.Users
+        <set>
+            <if test="password!=''">
+                Users.password='${password}'
+            </if>
+        </set>
+        <where>
+            Users.username = '${username}'
+        </where>
+    </update>
+
+
+    <select id="usersTableShow" resultType="com.hhu.model.User">
+        SELECT
+        Users.id,
+        Users.username,
+        Users.realname,
+        Users.note,
+        Users.authority
+        FROM
+        Intelligent_Rolling.dbo.Users
+        ORDER BY Users.id
+    </select>
+
+
+
+    <select id="getRealName" resultType="java.lang.String">
+        select realname
+        from Intelligent_Rolling.dbo.Users
+        where username = #{loginName}
+    </select>
+
+
+    <delete id="delete_user">
+        DELETE FROM Intelligent_Rolling.dbo.Users
+        <where>
+            Users.id = #{id}
+        </where>
+    </delete>
+
+    <update id="update_user">
+        UPDATE  Intelligent_Rolling.dbo.Users
+        <set>
+            Users.username = #{username},
+            Users.password = #{password},
+            Users.realname = #{realname},
+            Users.note = #{note},
+            Users.authority = #{authority}
+        </set>
+        <where>
+            Users.id = #{id}
+        </where>
+    </update>
+
+<!--    <insert id="insert_user">-->
+<!--        INSERT INTO Intelligent_Rolling.dbo.Users(username, password, realname, note, authority)-->
+<!--        VALUES (#{username}, #{password}, #{realname}, #{note}, #{authority})-->
+<!--    </insert>-->
+    <insert id="insert_user">
+        INSERT INTO "USER"(username, password, realname, note, authority)
+        VALUES (#{username}, #{password}, #{realname}, #{note}, #{authority})
+    </insert>
+
+
+
+</mapper>  

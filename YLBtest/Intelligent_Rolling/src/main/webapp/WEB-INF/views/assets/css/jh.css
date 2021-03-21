@@ -1,0 +1,68 @@
+/*
+    jh.css
+    公共样式
+ */
+
+.jhtitle {
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", 微软雅黑, Tahoma, Arial, sans-serif;
+    font-size: 20px !important;
+    font-weight: bold;
+    line-height: 50px;
+}
+
+.jhlogo {
+    display: flex;
+}
+
+.layui-nav-tree li a .layui-icon {
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.layui-nav * {
+    font-size: 16px;
+}
+
+.side-title {
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 10px;
+    color: white !important;
+}
+
+/*首页*/
+.layui-nav-tree li[data-name="homepage"] a .layui-icon {
+    color: mediumseagreen;
+}
+
+/*预警条件*/
+.layui-nav-tree li[data-name="warning"] a .layui-icon {
+    color: coral;
+}
+
+/*照片导出*/
+.layui-nav-tree li[data-name="photo"] a .layui-icon {
+    color: cornflowerblue;
+}
+
+
+/*密实度云图*/
+.layui-nav-tree li[data-name="density"] a .layui-icon {
+    color: palevioletred;
+}
+
+/*数据状况*/
+.layui-nav-tree li[data-name="dataList"] a .layui-icon {
+    color: dodgerblue;
+}
+
+/*日志管理*/
+.layui-nav-tree li[data-name="log"] a .layui-icon {
+    color: goldenrod;
+}
+
+
+/*用户管理*/
+.layui-nav-tree li[data-name="user"] a .layui-icon {
+    color: lightseagreen;
+}

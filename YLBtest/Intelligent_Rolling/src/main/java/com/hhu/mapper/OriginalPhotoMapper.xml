@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hhu.dao.OriginalPhotoDao">
+    <select id="selectData" resultType="com.hhu.model.OriginalPhoto">
+        SELECT time,internal_number,shovel_number,volume,total_volume,longitude,latitude,altitude
+        FROM
+        "PACKING_DATA"
+    </select>
+
+    <select id="selectProcessedData" resultType="com.hhu.model.ProcessedPhoto">
+        SELECT *
+        FROM
+        Intelligent_Rolling.dbo.Original_Photo as op,
+        Intelligent_Rolling.dbo.Process_info as pi
+        WHERE
+        op.photo_id = pi.origin_photo_id
+    </select>
+</mapper>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hhu.dao.DiagramDao">
+
+    <select id="getTransZ" resultType="java.lang.Integer">
+        SELECT DISTINCT layer_num
+        FROM Intelligent_Rolling.dbo.Original_Photo
+    </select>
+
+    <select id="getChosenDensity" resultType="com.hhu.model.Diagram">
+        SELECT Original_Photo.trans_x, Original_Photo.trans_y, Process_Info.density
+        FROM Intelligent_Rolling.dbo.Original_Photo,
+             Intelligent_Rolling.dbo.Process_Info
+        WHERE Original_Photo.layer_num = '${level}'
+          AND Original_Photo.photo_id = Process_Info.origin_photo_id
+    </select>
+
+</mapper>

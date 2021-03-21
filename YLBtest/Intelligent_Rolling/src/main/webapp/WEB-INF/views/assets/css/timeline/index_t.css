@@ -1,0 +1,311 @@
+.modal-body {
+  padding-left: 20px; }
+
+.myApp {
+  background-color: #EFEFEF;
+  margin: 0 -30px -30px -20px;
+  padding: 20px; }
+  .myApp .myApp-title {
+    font-size: 18px;
+    margin-bottom: 5px; }
+  .myApp .myApp-container {
+    min-height: 80px;
+    border: 3px dotted #CCC;
+    padding: 20px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+
+.drag-container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  min-height: 60px; }
+
+button.dim:visited, button.dim:focus, button.dim:hover {
+  color: #fff; }
+button.dim:hover {
+  -webkit-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  transform: scale(1.03); }
+
+button.dim-inline p {
+  display: inline; }
+
+button.text-out {
+  height: 70px;
+  padding-top: 4px;
+  margin-bottom: 45px !important; }
+  button.text-out p.dim-description {
+    font-size: 18px;
+    position: absolute;
+    color: #000;
+    font-weight: normal;
+    text-align: center;
+    width: 100%;
+    left: 0;
+    bottom: -44px; }
+
+#chartdiv {
+  width: 100%;
+  height: 450px; }
+
+.amcharts-chart-div a {
+  display: none !important; }
+/*# sourceMappingURL=sourcemaps/second_index.css.map */
+.alert{
+	margin-bottom: 0px;
+}
+.tree {
+    min-height:20px;
+    height: auto;
+    padding:19px;
+    background-color:#fbfbfb;
+    /*border:1px solid #999;*/
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    -webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.05)
+}
+
+.subtree{
+	width:126px; /* height:125px; */text-align:center;
+}
+.subtree>div>ul{
+	/* width: 1000px; */
+    text-align: left;
+}
+.subtree>div>ul>li{
+	float:left; 
+	list-style:none; 
+}
+.imgtext{
+
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.tree li {
+    list-style-type:none;
+    margin:0;
+    padding:10px 5px 0 5px;
+    position:relative;
+}
+.tree >div> ul > li {
+	float: left;
+}
+.tree li::before, .tree li::after {
+    content:'';
+    left:-20px;
+    position:absolute;
+    right:auto
+}
+.tree ul>li>ul>li::before {
+    border-left:1px solid #999;
+    bottom:50px;
+    height:100%;
+    top:0;
+    width:1px
+}
+.tree ul>li>ul>li::after {
+   	border-top:1px solid #999;
+    height:20px;
+    top:25px;
+    width:25px
+}
+
+.tree>ul>li>span{
+    margin-left: -27px;
+}
+.tree>div{
+	float:left;
+}
+.tree>div>img {
+	width: 80px;
+    height: 80px;
+}
+
+.tree li.parent_li>span {
+    cursor:pointer
+}
+.tree>ul>li::before, .tree>ul>li::after {
+    border:0
+}
+.tree li:last-child::before {
+    height:30px
+}
+
+.timeline {
+    position: relative;
+    height: 150px;
+    margin: 0 auto 10px auto;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+    
+}
+
+.events-wrapper {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    margin:0 34px;
+}
+
+.events-wrapper::before {
+  left: 0;
+  background-image: -webkit-linear-gradient( left , #f8f8f8, rgba(248, 248, 248, 0));
+  background-image: linear-gradient(to right, #f8f8f8, rgba(248, 248, 248, 0));
+}
+.events-wrapper::after {
+  right: 0;
+  background-image: -webkit-linear-gradient( right , #f8f8f8, rgba(248, 248, 248, 0));
+  background-image: linear-gradient(to left, #f8f8f8, rgba(248, 248, 248, 0));
+}
+.events {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    margin: 7px 0px;
+    height: 135px;
+    -webkit-transition: -webkit-transform 0.4s;
+    -moz-transition: -moz-transform 0.4s;
+    transition: transform 0.4s;
+}
+
+.events div.icon-box:hover{
+	font-weight:bold;
+}
+
+ul.cd-timeline-navigation {
+	list-style: none;
+}
+
+.cd-timeline-navigation a {
+  /* these are the left/right arrows to navigate the timeline */
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  padding: 0 12px;
+  line-height: 29px;
+  font-size: 25px;
+  bottom: auto;
+  color:#dfdfdf;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  border: 2px solid #dfdfdf;
+  /* replace text with an icon */
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-transition: border-color 0.3s;
+  -moz-transition: border-color 0.3s;
+  transition: border-color 0.3s;
+}
+.cd-timeline-navigation a.slider-left-link {
+  left: 0;
+  -webkit-transform: translateY(-50%) rotate(180deg);
+  -moz-transform: translateY(-50%) rotate(180deg);
+  -ms-transform: translateY(-50%) rotate(180deg);
+  -o-transform: translateY(-50%) rotate(180deg);
+  transform: translateY(-50%) rotate(180deg);
+}
+.cd-timeline-navigation a.slider-right-link {
+  right: 0;
+}
+.cd-timeline-navigation a.slider-right-link:hover, .cd-timeline-navigation a.slider-left-link:hover{
+	color: #7b9d6f;
+}
+.cd-timeline-navigation a:hover {
+  border-color: #7b9d6f;
+}
+.cd-timeline-navigation a.inactive {
+  cursor: not-allowed;
+}
+.cd-timeline-navigation a.inactive::after {
+  background-position: 0 -16px;
+}
+.cd-timeline-navigation a.inactive:hover {
+  border-color: #dfdfdf;
+}
+.cd-timeline-navigation a.inactive:hover {
+  border-color: #dfdfdf;
+}
+.icon-box{
+	float: left;
+	width: 126px;
+	margin: 10px 0;
+	text-align: center;
+}
+.icon-box img{
+	width:80px;
+	height:80px;
+    border-radius:80px;
+}
+.parent_li>span {
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    /*border:1px solid #999;*/
+    border-radius:5px;
+    display:inline-block;
+    padding: 7px 8px;
+    line-height: 21px;
+    text-decoration:none;
+    cursor:pointer
+}
+.parent_li>ul{
+	margin-left: 22px;
+}
+.parent_li li{
+	list-style-type:none;
+	margin:0;
+	padding:10px 5px 0 5px;
+    position:relative
+}
+
+.parent_li li::before, .parent_li li::after {
+    content:'';
+    left:-20px;
+    position:absolute;
+    right:auto
+}
+.parent_li li::before {
+    border-left:1px solid #999;
+    bottom:50px;
+    height:100%;
+    top:0;
+    width:1px
+}
+.parent_li li::after {
+    border-top:1px solid #999;
+    height:20px;
+    top:25px;
+    width:25px
+}
+.parent_li li:last-child::before {
+    height:30px
+}
+.parent_li li span{
+	width: 130px;
+	border: 1px solid #999;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 3px 8px;
+    text-decoration: none;
+}
+
+.alert-back{
+	color: #eee;
+    background-color: #3498DB;
+    border-color: #ebccd1;
+}

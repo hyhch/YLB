@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hhu.dao.WarningDao">
+
+    <update id="updateDensityWarning">
+        update Intelligent_Rolling.dbo.Warning_density
+        set warning_density = #{newVal}
+        where id = 1
+    </update>
+
+    <update id="updateGranularWarning">
+        update Intelligent_Rolling.dbo.Warning_Granular
+        set x = #{newVal_x}, y_min = #{newVal_y_min}, y_max = #{newVal_y_max}
+        where id = 1
+    </update>
+
+    <select id="getDensityWarning" resultType="java.lang.Long">
+        select warning_density
+        from Intelligent_Rolling.dbo.Warning_density
+        where id = 1
+    </select>
+
+    <select id="getGranularWarning" resultType="com.hhu.model.GranularWarning">
+        select x,y_min,y_max
+        from Intelligent_Rolling.dbo.Warning_Granular
+        where id = 1
+    </select>
+
+</mapper>

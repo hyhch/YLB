@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>观测数据</title>
+    <link rel="stylesheet" href="../../layuiadmin/layui/css/layui.css">
+    <link rel="stylesheet" href="./data_page.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="layui-card">
+            <div class="layui-card-header">
+                <span>筛选</span>
+            </div>
+            <div class="layui-card-body">
+                <table class="screening-table">
+                    <tr>
+                        <td style="width: 60px; min-width: 60px;">
+                            <span>时间段</span>
+                        </td>
+                        <td>
+                            <input type="text" class="layui-input input-box" id="time-date">
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" align="center">
+                            <button id="show-btn" class="layui-btn">查询</button>
+                            <button id="clear-btn" class="layui-btn layui-btn-normal">清除筛选</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="layui-card">
+            <div class="layui-card-header">
+                <span>表格</span>
+            </div>
+            <div class="layui-card-body">
+                <table class="layui-table">
+                    <thead>
+                        <tr>
+<!--                            <th>图片名</th>-->
+                            <th>时间</th>
+                            <th>内部桩号</th>
+                            <th>位移</th>
+                            <th>总位移</th>
+                        </tr>
+                    </thead>
+                    <tbody id="message-body">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../layuiadmin/layui/layui.js"></script>
+    <script src="./observed.js"></script>
+    <script>
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,246 @@
+@charset "utf-8";
+.text-null{
+	color:#00CED1;
+}
+.text-no{
+	color:#20B2AA;
+}
+
+.nav-tabs > li > a {
+  color: #A7B1C2;
+  font-weight: 600;
+  padding: 10px 20px 10px 20px;
+}
+
+@charset "utf-8";
+/*——————————————————————日期start——————————————————————————————*/
+.calendar {
+	padding: 5px;
+	overflow: hidden;
+	text-align: center;
+}
+/*月份的上下翻页*/
+#calyearp{
+	color: #333333;
+	text-align: center;
+	font-size: 13px;
+	font-weight: bold;
+	margin: 0;
+	padding-top: 5px;
+}
+
+
+ul, li, div, h1{padding:0;margin:0;}
+.blk{width:600px;position:absolute;background:#fff;}
+.blk .head, .blk .head-right, .blk .foot, .blk .foot-right{background:url(../../img/datacollect_1.png);height:4px;}
+.blk .head{padding-left:4px;}
+.blk .head-right{background-position:right top;}
+.blk .foot{padding-left:4px;background-position:left bottom;_height:3px;}
+.blk .foot-right{background-position:right bottom;}
+.blk .main{border-left:2px solid #85B6E2;border-right:2px solid #85B6E2;position:relative;background:#fff;}
+.blk .main h2{font:bold 16px "Microsoft YaHei";padding:10px 20px 2px;color:#85B6E2;}
+
+
+a{text-decoration:none;}
+a.closeBtn{position:absolute;top:5px;right:10px;display:block;width:60px;padding:4px 0;text-align:center;background:#fff;border:1px solid #85B6E2;color:#333;}
+a.closeBtn:hover{color:#fff;border:1px solid #85B6E2;background:#85B6E2;}
+
+#loginmodal {
+  width: 300px;
+  padding: 15px 20px;
+  background: #f3f6fa;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+#xlsFilterAllNone {
+	text-align: right;	
+}
+
+#xlsFilterAll, #xlsFilterNone {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#xlsFilterRows {
+	margin-top: 5px;
+	border: 1px solid #999999;
+	background-color: #F2F7FC;
+	color: #000000;
+}
+
+div.xlsFilterRow {
+	min-height: 18px;
+	height: auto ! important;
+	cursor: pointer;
+	padding: 1px 1px 1px 32px;
+	text-indent: -12px;
+}
+
+div.xlsFilterRow:hover {
+	background-color: #FFFFD7;
+}
+
+div.xlsFilterRow input {
+	margin: 0px 0px 0px 3px;	
+}
+
+.xlsFilterCheck {
+	float: left;
+	height: 16px;
+	width: 16px;
+	margin: 0px 5px 0px -30px;
+}
+#xlsFilterRows div.xlsFilterCheckOn {
+	background: url(../images/checkbox-on.png) center center no-repeat;
+}
+
+#xlsFilterRows div.xlsFilterCheckOff {
+	background: url(../images/checkbox-off.png) center center no-repeat;
+}
+
+.xlsFilterHeader {
+	cursor: pointer !important;	
+}
+
+.xlsNoFilterHeader {
+	cursor: default !important;
+}
+
+.xlsFilteredColumn {
+	background-color: #FFFFD7 !important;
+}
+
+/* 首页工作进度开始 */
+
+
+.lingbox a{color:#F0F0F0;line-hight:40px}
+/* .lingbox {width:1035px;height:50px; border: 0px solid #E0E0E0;margin:0 auto} */
+.lingbox {width:99%; height:50px; border: 0px solid #E0E0E0;margin:0 auto;min-width:500px; }
+.lingbox_content {width:99%; height:30px; border: 0px solid #E0E0E0;margin:0 auto;min-width:500px; }
+.buttonbox {width:5%; height:45px; border: 0px solid #E0E0E0;margin:0 auto;float:left }
+.lingbox_box {width:20%; height:45px; border: 0px solid #E0E0E0;margin:0 auto;margin-left:2%;float:left }
+.lingbox_box_content {width:20%; height:25px; border: 0px solid #E0E0E0;margin:0 auto;margin-left:2%;float:left }
+.buttonbox_content {width:5%; height:25px; border: 0px solid #E0E0E0;margin:0 auto;float:left }
+
+.rate{
+	border: 0px solid #E0E0E0;
+	list-style-type:none;
+	height:40px; 
+	width:110px;
+	background: #BEBEBE;
+    text-align: center;
+    line-height:40px; 
+   	float:left;
+    }
+ .ratefirst{
+	border: 0px solid #E0E0E0;
+	list-style-type:none;
+	height:40px; 
+	width:110px;
+	background: #BEBEBE;
+    text-align: center;
+    line-height:40px;  
+   	float:left;
+    }
+.rate:before{
+	position: absolute;
+	margin-left:-17px;
+	height: 0; width: 0;
+	border-bottom: 20px inset transparent;
+	border-left: 20px solid #fff;
+	border-top: 20px inset transparent;
+	content: "";
+}
+.triangle-active {
+	border: 20px solid #E0E0E0;
+    height:0;  
+    width:0; 
+    margin-right:12%;
+    border-color:transparent  transparent transparent #007ACC;  
+    float:left;
+}
+.triangle-on {
+	border: 20px solid #16a765;
+    height:0;  
+    width:0; 
+   /*  margin-right:12%; */
+    border-color:transparent  transparent transparent #16a765;  
+    float:left;
+}
+.triangle {
+	border: 0px solid #E0E0E0;
+    height:0;  
+    width:0; 
+  /*   margin-right:12%;  */
+    border:20px solid #007ACC;  
+    border-color:transparent  transparent transparent #BEBEBE;  
+    float:left;
+}
+#previous {
+    width:0; 
+    height:0; 
+    margin-top:5px;
+   /*  margin-right:35px; */
+    border-top:15px solid transparent;
+    border-bottom:15px solid transparent; 
+    border-right:15px solid #3E7E71; 
+    float:left
+}
+
+#next {
+    width:0; 
+    height:0; 
+    margin-top:5px;
+   /*  margin-left:35px; */
+    border-top:15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #3E7E71;
+    cursor:not-allowed;
+    float:left;
+}
+
+.tab-content{
+	width:100%; border:0px solid #E0E0E0;margin:0 auto;
+}
+.tab-def{
+	border:0px solid #E0E0E0;
+	width:155px;
+	margin-left:10%;
+	visibility:hidden;
+	float:left;
+}
+.tab-def td{
+	width:50%
+}
+
+
+
+
+
+
+/* .comment_bubble {
+	border: 1px solid #E0E0E0;
+    width: 100px;
+    height: 40px;
+    background: #007ACC;
+    position: relative;
+    border-radius: 4px 0 0 4px; 
+    float:left
+}
+  
+.comment_bubble:before {
+    content: "";
+    width: 0;
+    height: 0;
+    left: 100%;
+    top: 0px;
+    position: absolute;
+    border-top: 20px solid transparent;
+    border-left: 20px solid #007ACC;
+    border-bottom: 20px solid transparent;
+}   */ 

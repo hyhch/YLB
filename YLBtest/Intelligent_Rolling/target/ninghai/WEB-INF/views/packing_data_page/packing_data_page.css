@@ -1,0 +1,25 @@
+.container {
+    width: 100%;
+    padding: 20px 60px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.screening-table {
+    width: 100%;
+}
+
+.screening-table td {
+    padding: 5px;
+}
+
+.input-box {
+    width: 100%;
+    display: inline;
+}
+
+.table-link {
+    color: #234da7;
+    text-decoration: underline;
+    cursor: pointer;
+}

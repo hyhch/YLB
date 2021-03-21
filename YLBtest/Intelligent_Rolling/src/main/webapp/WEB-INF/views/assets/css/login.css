@@ -1,0 +1,31 @@
+.background-image {
+    background-image: url("../img/5971612329980_.pic_hd.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.jh-login{
+    display: none;
+    padding-left: 70%;
+    padding-top: 14%;
+    border-color: #1E9FFF
+}
+.jh-login-main {
+    background:rgba(296,296,296,0.85);
+    border-radius:10px;
+    border-style: solid;
+    border-color: #96BCE3;
+    border-width: 1px;
+    float: left;
+}
+.jh-login-title {
+    font-size: 27px;
+    color: black
+}
+.password-img {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    margin: 10px;
+}

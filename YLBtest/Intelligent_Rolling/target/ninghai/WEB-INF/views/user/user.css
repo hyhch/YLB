@@ -1,0 +1,17 @@
+.layui-input {
+    padding-left: 0;
+}
+input {
+    text-align: center;
+}
+.layui-form-label {
+    text-align: left;
+}
+
+.input-readonly {
+    background-color:#DCDCDC
+}
+
+.layui-form-select dl dd{
+    text-align: center;
+}

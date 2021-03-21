@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hhu.dao.LogTableDao">
+
+    <insert id="addLog">
+        INSERT INTO
+        "LOGTABLE"(
+        operator,
+        operateType,
+        operateDate,
+        operateResult
+        )
+        VALUES (
+        '${operator}',
+        '${operateType}',
+        '${operateDate}',
+        '${operateResult}'
+        )
+    </insert>
+
+    <select id="getOperator" resultType="com.hhu.model.User">
+        SELECT
+        Users.username,
+        Users.id
+        FROM
+        Intelligent_Rolling.dbo.Users
+        ORDER BY
+        id
+    </select>
+
+    <select id="logTable" resultType="com.hhu.model.LogTable">
+        SELECT
+        LogTable.operator,
+        LogTable.operateType,
+        LogTable.operateResult,
+        LogTable.operateDate
+
+        FROM
+        Intelligent_Rolling.dbo.LogTable
+
+        <where>
+            LogTable.operator = '${operator}'
+
+            ORDER BY LogTable.operateDate DESC
+        </where>
+    </select>
+
+    <select id="logTable1" resultType="com.hhu.model.LogTable">
+        SELECT
+        LogTable.operator,
+        LogTable.operateType,
+        LogTable.operateResult,
+        LogTable.operateDate
+
+        FROM
+        Intelligent_Rolling.dbo.LogTable
+
+        ORDER BY LogTable.operateDate DESC
+    </select>
+
+</mapper>  

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hhu.dao.HomePageDao">
+
+    <select id="getTotalNum" resultType="java.lang.Integer">
+        select count(*)
+        FROM
+        Intelligent_Rolling.dbo.Original_Photo
+        WHERE
+        Original_Photo.layer_num &gt;= #{layNum}
+    </select>
+
+    <select id="getLatestDate" resultType="java.lang.String">
+        SELECT
+        TOP 1 Original_Photo.time
+        FROM
+        Intelligent_Rolling.dbo.Original_Photo
+        WHERE
+        Original_Photo.time &gt;= #{stm}
+        AND Original_Photo.time &lt;= #{etm}
+        order by Original_Photo.time desc
+    </select>
+
+    <select id="getMaxGrading" resultType="java.lang.Integer">
+        select top 1
+        Process_Info.grading_level
+        FROM
+        Intelligent_Rolling.dbo.Process_Info
+        order by Process_Info.grading_level desc
+    </select>
+
+    <select id="getMaxDensity" resultType="java.lang.Integer">
+        select top 1
+        Process_Info.density_level
+        FROM
+        Intelligent_Rolling.dbo.Process_Info
+        order by Process_Info.density_level desc
+    </select>
+
+    <select id="getGradingProcessNum" resultType="java.lang.Integer">
+        select count(*)
+        FROM
+        Intelligent_Rolling.dbo.Original_Photo
+        WHERE
+        Original_Photo.time &gt;= #{stm}
+        AND Original_Photo.time &lt;= #{etm}
+        and Original_Photo.is_processed_granular = 1
+    </select>
+
+    <select id="getLithologyProcessNum" resultType="java.lang.Integer">
+        select count(*)
+        FROM
+        Intelligent_Rolling.dbo.Original_Photo
+        WHERE
+        Original_Photo.time &gt;= #{stm}
+        AND Original_Photo.time &lt;= #{etm}
+        and Original_Photo.is_processed_lithology = 1
+    </select>
+
+    <select id="getWeatheringProcessNum" resultType="java.lang.Integer">
+        select count(*)
+        FROM
+        Intelligent_Rolling.dbo.Original_Photo
+        WHERE
+        Original_Photo.time &gt;= #{stm}
+        AND Original_Photo.time &lt;= #{etm}
+        and Original_Photo.is_processed_weathering = 1
+    </select>
+
+    <select id="getCurrentLay" resultType="java.lang.Integer">
+        SELECT
+        TOP 1 Original_Photo.layer_num
+        FROM
+        Intelligent_Rolling.dbo.Original_Photo
+        order by Original_Photo.time desc
+    </select>
+
+
+</mapper>
