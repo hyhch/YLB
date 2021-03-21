@@ -5,11 +5,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.hhu</groupId>
-  <artifactId>ninghai</artifactId>
+  <artifactId>YLB</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
 
-  <name>ninghai</name>
+  <name>YLB</name>
 <!--  &lt;!&ndash; FIXME change it to the project's website &ndash;&gt;-->
 <!--  <url>http://www.example.com</url>-->
 
@@ -324,7 +324,7 @@
   </dependencies>
 
   <build>
-    <finalName>ninghai</finalName>
+    <finalName>YLB</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <plugin>

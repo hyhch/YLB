@@ -9,7 +9,7 @@ layui.config({
 
     //验证是否登录
     $.ajax({
-        url: "../../ninghai_war_exploded/checkLogin",
+        url: "../../YLB_war_exploded/checkLogin",
         type: "post",
         success: function (data) {
             console.log(data);
@@ -19,7 +19,7 @@ layui.config({
             }
             //从session中取出登录信息
             $.ajax({
-                url:"../../ninghai_war_exploded/getRealName",
+                url:"../../YLB_war_exploded/getRealName",
                 type:"post",
                 success:function (result) {
                     var realname = result;
@@ -57,7 +57,7 @@ function LogoutF() {
     //清空session并且跳转到登录页面
     $.ajax({
         //服务器用：
-        url:"../../ninghai_war_exploded/logout",
+        url:"../../YLB_war_exploded/logout",
         //idea用：
         //url:"../../logout",
         type:"post",
