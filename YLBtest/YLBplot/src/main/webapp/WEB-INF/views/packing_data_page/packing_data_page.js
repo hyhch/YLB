@@ -58,8 +58,8 @@
 
     let messageBody = document.getElementById('message-body'); // 存放数据的表格内容
     let timeDate = document.getElementById('time-date'); // 存放筛选的时间
-    // let heightStart = document.getElementById('height-start'); // 存放筛选的最低高程
-    // let heightEnd = document.getElementById('height-end'); // 存放筛选的最高高程
+    let numberStart = document.getElementById('number-start'); // 存放筛选的最低桩号
+    let numberEnd = document.getElementById('number-end'); // 存放筛选的最高桩号
     // let sectionStart = document.getElementById('section-start'); // 存放筛选的最低坝段
     // let sectionEnd = document.getElementById('section-end'); // 存放筛选的最高坝段
     // let planeStart = document.getElementById('plane-start'); // 存放筛选的最底仓面
@@ -75,10 +75,10 @@
             start: '',
             end: ''
         }, //  筛选的时间
-        // screenHeight: {
-        //     start: '',
-        //     end: ''
-        // }, // 筛选的高程
+        screenNumber: {
+            start: '',
+            end: ''
+        }, // 筛选的内部桩号
         // screenSection: {
         //     start: '',
         //     end: ''
@@ -137,10 +137,10 @@
                 if (!betweenTime(new Date(d.time), datas.screenTime.start, datas.screenTime.end))
                     continue; // 如果不在时间区间内
 
-            //     // 高程
-            // if (datas.screenHeight.start != '' && datas.screenHeight.end != '')
-            //     if (parseFloat(d.dam_height) < parseFloat(datas.screenHeight.start) || parseFloat(d.dam_height) > parseFloat(datas.screenHeight.end))
-            //         continue;
+                // 桩号
+            if (datas.screenNumber.start != '' && datas.screenNumber.end != '')
+                if (parseFloat(d.internal_number) < parseFloat(datas.screenNumber.start) || parseFloat(d.internal_number) > parseFloat(datas.screenNumber.end))
+                    continue;
 
             //     // 坝段
             // if (datas.screenSection.start != '' && datas.screenSection.end != '')
@@ -196,8 +196,8 @@
 
     clearBtn.addEventListener('click', function() {
         timeDate.value = '';
-        // heightStart.value = '';
-        // heightEnd.value = '';
+        numberStart.value = '';
+        numberEnd.value = '';
         // sectionStart.value = '';
         // sectionEnd.value = '';
         // planeStart.value = '';
@@ -210,13 +210,13 @@
         // datas.screenPlane.end = '';
     });
 
-    // 绑定高程
-    // heightStart.addEventListener('input', function() {
-    //     datas.screenHeight.start = this.value;
-    // });
-    // heightEnd.addEventListener('input', function() {
-    //     datas.screenHeight.end = this.value;
-    // });
+    // 绑定桩号
+    numberStart.addEventListener('input', function() {
+        datas.screenNumber.start = this.value;
+    });
+    numberEnd.addEventListener('input', function() {
+        datas.screenNumber.end = this.value;
+    });
     // sectionStart.addEventListener('input', function() {
     //     datas.screenSection.start = this.value;
     // });

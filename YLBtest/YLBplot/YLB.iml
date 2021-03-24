@@ -20,7 +20,6 @@
         <setting name="validation-enabled" value="true" />
         <datasource-mapping>
           <factory-entry name="YLB" />
-          <factory-entry name="YLB" />
         </datasource-mapping>
         <naming-strategy-map />
       </configuration>
